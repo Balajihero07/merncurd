@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 app.use('/api/users', userDataRoute);
 
 // Start the server
-const port = process.env.PORT || 3000;
+const port = process.env.APIURI || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
