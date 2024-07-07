@@ -4,7 +4,7 @@ const Read = () => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   async function handleDelete(id) {
-    const response = await fetch(`http://localhost:8000/${id}`, {
+    const response = await fetch(`https://merncurd-w6g3.onrender.com//${id}`, {
       method: "DELETE",
     });
     const result1 = await response.json();
@@ -21,7 +21,7 @@ const Read = () => {
     }
   }
   async function getData() {
-    const response = await fetch("http://localhost:8000");
+    const response = await fetch("https://merncurd-w6g3.onrender.com/");
     const result = await response.json();
     console.log("result..", result);
     if (!response.ok) {

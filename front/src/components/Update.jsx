@@ -10,7 +10,7 @@ const Update = () => {
 
   const getSingleData = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/${id}`);
+      const response = await fetch(`https://merncurd-w6g3.onrender.com//${id}`);
       const result = await response.json();
       if (response.ok) {
         setName(result.name);
@@ -27,7 +27,7 @@ const Update = () => {
     e.preventDefault();
     const updatedUser = { name, sta };
     try {
-      const response = await fetch(`http://localhost:8000/edit/${id}`, {
+      const response = await fetch(`https://merncurd-w6g3.onrender.com//edit/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

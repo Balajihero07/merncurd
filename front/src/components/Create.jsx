@@ -11,7 +11,7 @@ const Create = () => {
     e.preventDefault();
     const addUser = { name,sta };
     console.log(addUser);
-    const response = await fetch("http://localhost:8000/", {
+    const response = await fetch("https://merncurd-w6g3.onrender.com//", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
